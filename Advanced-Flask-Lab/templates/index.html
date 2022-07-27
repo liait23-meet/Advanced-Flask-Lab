@@ -13,12 +13,12 @@
 
 				<!-- Header -->
 					<header id="header">
-						<span class="avatar"><img src="{{url_for('static',filename='images/avatar.jpg')}}" alt="" /></span>
+						<span class="avatar"><img src="{{image_link}}" alt="" /></span>
 
-            <h1>Description</h1>
+            <h1>Middle East Entrepreneurs of Tomorrow. Enabling the next generation of Israeli and Palestinian leaders.</h1>
             <br>
             <!-- About me button -->
-            <a href="#"><button style="color:white;width:40%" >More about me</button></a>
+            <a href="/about"><button style="color:white;width:40%" >More about me</button></a>
             <!--  -->
             <br> <br>
 						<ul class="icons">
@@ -36,33 +36,42 @@
 						<!-- Thumbnails -->
 							<section class="thumbnails">
                 
-                <div>
-                      <a href="">
-                        <img src="static/images/thumbs/01.jpg" alt="" />
+                {%for img in posts %}
+                <a href="">
+                        <img src="{{img}}" alt="" />
+                        <h3>{{posts[img]}}</h3>
+                </a>
+                {%endfor%}
+
+
+
+            <!--     <div>
+                      <a href=""> -->
+             <!--            <img src="static/images/thumbs/01.jpg" alt="" />
                         <h3>Caption... blah blah blah</h3>
                       </a>
                 
                       <a href="">
-                        <img src="url_for('static',filename='images/thumbs/02.jpg')" alt="" />
+                        <img src="static/css/images/thumbs/02.jpg" alt="" />
                         <h3>Caption... blah blah blah</h3>
                       </a>
                 </div>    
                 <div>
                   <a href="">
-                        <img src="{{url_for('static',filename='images/thumbs/03.jpg')}}" alt="" />
+                        <img src="static/css/images/thumbs/03.jpg" alt="" />
                         <h3>Caption... blah blah blah</h3>
-                      </a>
-                </div>  
+                      </a> -->
+              <!--   </div>   -->
 
 							</section>
 
 					</section>
 
-				<!-- Footer -->
+				<!-- Footer 
 					<footer id="footer">
-						<p>&copy; MEET's (fake) Instagram. No rights reserved. 
-					</footer>
-
+						<p>&copy; MEET's (fake) Instagram. No rights reserved. </p>
+					</footer> -->
+-->
 			</div>
 
 		<!-- Scripts -->
